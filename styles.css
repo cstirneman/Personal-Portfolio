@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #272727;
+    cursor: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+/* Container Layout */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+/* Custom cursor styling */
+.custom-cursor {
+    position: absolute;
+    width: 20px; /* Size of the outer circle */
+    height: 20px;
+    border: 2px solid #0cc0df; /* Border color of the outer circle */
+    border-radius: 50%; /* Make it a circle */
+    pointer-events: none; /* Prevents the custom cursor from interfering with clicks */
+    transform: translate(-50%, -50%); /* Centers it around the cursor position */
+    transition: transform 0.1s ease; /* Smooth movement */
+    z-index: 9999; /* Ensures the cursor is on top of other elements */
+}
+
+.custom-cursor::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10%; /* Size of the inner dot */
+    height: 10%;
+    background-color: #0cc0df; /* Color of the dot */
+    border-radius: 50%; /* Make it a circle */
+    transform: translate(-50%, -50%); /* Centers the dot inside the outer circle */
+}
+
+
+
+
+
+/* Welcome page animation */
+.overlay-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999; /* Ensure it covers the welcome page initially */
+    overflow: hidden;
+}
+
+.overlay-line {
+    flex: 1; /* Takes up equal space */
+    background-color: #111; /* Match the sidebar or background color */
+    animation: slideOut 1.5s forwards;
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.overlay-line:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.overlay-line:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+
+
+
+/* Welcome page Styles */
+.logo-container{
+    background-color: rgb(73, 73, 73);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img{
+    height: 10vh;
+}
+
+.logo-container img:hover{
+    transform: scale(1.2);
+}
+
+.sidebar {
+    position: fixed;
+    width: 10vw;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.sidebar h2 {
+    color: #0cc0df;
+    font-size: 1.5em;
+}
+
+.sidebar ul {
+    font-size: 1.2rem;
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    cursor: none;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    cursor: none;
+    color: #f52ea8;
+}
+
+.code-decoration {
+    font-family: 'Tangerine', cursive;
+    color: gray;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 15vw;
+}
+
+.code-decoration.top {
+    top: 10px;
+}
+
+.code-decoration.bottom {
+    bottom: 15vh;
+}
+
+.body-tag-decoration{
+    margin-left: 2vw;
+}
+
+.scroll-indicator {
+    position: absolute;
+    left: 8vw;
+    bottom: 10vh;
+    transform: rotate(90deg);
+    font-size: 0.9rem;
+    color: white;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+#right-side-indicator{
+    position: absolute;
+    left: 93vw;
+    bottom: 10vh;
+}
+
+main {
+    margin-left: 20vw; /* Offset for the sidebar */
+}
+
+section {
+    padding: 10% 0;
+}
+
+#welcome h1{
+    font-size: 5rem;
+    margin: 0;
+}
+
+#welcome img{
+    height: 12vh;
+    transform: translateY(15%);
+}
+
+.resume-links{
+    display: flex;
+    position: fixed;
+    left: 80vw;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 3vh;
+
+}
+
+.resume-links button{
+    height: 5vh;
+    padding: 1vh 2vw;
+    background-color: #0cc0df;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.resume-links button:hover, .resume-links img:hover{
+    transform: scale(1.2);
+}
+
+.resume-links img{
+    height: 5vh;
+    margin-left: 2vw;
+}
+
+.contact-btn {
+    cursor: none;
+    border: 2px solid #0cc0df;
+    color: #0cc0df;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.contact-btn:hover{
+    transform: translateY(-5px); /* Makes the button pop up */
+    box-shadow: 0 5px 15px rgba(12, 192, 223, 0.4); /* Adds a shadow effect */
+}
+
+
+
+
+/* Section styles */
+#about h2, #skills h2, #work h2, #contact h2{
+    font-size: 3rem;
+    border-bottom: 5px solid #0cc0df;
+    width: 20vw;
+    padding-bottom: 5px;
+}
+
+#welcome, #about, #skills, #contact{
+    color: white;
+    height: 100vh;
+}
+
+#work{
+    height: 300vh;
+    color: white;
+}
+
+
+
+/* about page styles */
+.about-content {
+    display: flex;
+    align-items: flex-start; 
+}
+
+.about-content img {
+    height: 50vh;
+    border-radius: 5px;
+    border: 2px solid #0cc0df;
+}
+
+.about-content p {
+    margin: 0 5%; 
+    padding-left: 0; 
+    color: white;
+    line-height: 1.5;
+}
+
+
+
+
+
+/* Skills page styles */
+.skills{
+    background-color: #0cc0df;
+    width: 25%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.skills h3{
+    padding:5px;
+    text-align: center;
+}
+
+#skills button{
+    margin-bottom: 5%;
+    background-color: #272727;
+    border: 2px solid #0cc0df;
+    color: white;
+    font-size: 1rem;
+    padding: 2%;
+    margin-right: 2%;
+    min-width: 10vw;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#skills button:hover {
+    transform: translateY(-5px); /* Makes the button pop up */
+    box-shadow: 0 5px 15px rgba(12, 192, 223, 0.4); /* Adds a shadow effect */
+}
+
+
+
+
+/* projects page styles */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh; /* Adjusts spacing between project items */
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2vh; /* Adds space between project rows */
+}
+
+.project-item img {
+    max-width: 80vh; /* Adjust as needed */
+    border-radius: 10px;
+    border: 2px solid #0cc0df;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-item img:hover {
+    transform: scale(1.2);
+}
+
+.project-description {
+    margin-left: 5vw;
+    max-width: 30vw; /* Adjust as needed for responsive design */
+    color: white;
+}
+
+.project-description h3{
+    color: #0cc0df;
+}
+
+.project-links{
+    height: 5.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+
+.project-links img{
+    height: 3vh;
+    border: none;
+}
+
+.project-links a{
+    margin-left: auto; /* This pushes the logo to the right */
+}
+
+.project-links img:hover{
+    transform: scale(1.2);
+}
+
+.project-links button {
+    background-color: #0cc0df;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1vw; /* Adds spacing between the logo and the button */
+}
+
+.project-links button a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.project-links button:hover{
+    transform: scale(1.2);
+}
+
+
+
+/* Contact page styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 80%;
+    margin: 0 20vw 0 0;
+    color: white;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #0cc0df;
+    border-radius: 5px;
+    background-color: #272727;
+    color: white;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    background-color: #0cc0df;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f52ea8;
+    outline: none;
+}
+
+
+.contact-form button:hover {
+    background-color: #0aa1b5;
+}

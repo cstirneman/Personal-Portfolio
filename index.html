@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="overlay-container">
+        <div class="overlay-line"></div>
+        <div class="overlay-line"></div>
+        <div class="overlay-line"></div>
+        <!-- Repeat as needed -->
+    </div>
+    
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo-container">
+                <img src="./images/c-logo.png" alt="logo">
+            </div>
+            <ul>
+                <li><a href="#welcome">Home</a></li><hr>
+                <li><a href="#about">About</a></li><hr>
+                <li><a href="#skills">My Skills</a></li><hr>
+                <li><a href="#work">Projects</a></li><hr>
+                <li><a href="#contact">Contact</a></li><hr>
+            </ul>
+            
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <div class="resume-links">
+                <button id="resume-btn">Resume</button>
+                <a href="https://github.com/cstirneman" target="_blank"><img src="./images/github-mark-white.png" alt="github-logo"></a>
+            </div>
+            
+            <section id="welcome">
+                <h1>Hi,</h1>
+                <h1>I'm <img src="./images/c-logo.png" alt="">hris,</h1>
+                <h1>aspiring web developer</h1>
+                <a href="#contact" class="contact-btn">Contact me!</a>
+                <div class="code-decoration top">
+                    <p>&lt;html&gt;</p>
+                    <p class="body-tag-decoration">&lt;body&gt;</p>
+                </div>
+                <div class="code-decoration bottom">
+                    <p class="body-tag-decoration">&lt;/body&gt;</p>
+                    <p>&lt;/html&gt;</p>
+                </div>
+                <div class="scroll-indicator">scroll down >>></div>
+                <div class="scroll-indicator" id="right-side-indicator">scroll down >>></div>
+            </section>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="img-container">
+                        <img src="./images/headshot.jpg" alt="headshot">
+                    </div>
+                    <p>
+                        Hi, I'm Chris Stirneman, an aspiring web developer with a passion for creating clean, functional, and visually appealing websites. I'm 24 years old and I live in Louisville, KY
+                        with my girlfriend of 3 years and our dog. I graduated in 2018 from Bellarmine University with a Bachelor’s degree in Exercise Science and initially pursued a Doctorate in Physical Therapy. 
+                        However, I realized this wasn’t my calling and decided to pivot toward software engineering. In 2024, I earned a Bachelor’s degree in Software and Data Engineering, also from Bellarmine University.  
+                        Since then, I’ve dedicated myself to honing my skills in front-end development, focusing on HTML, CSS, and JavaScript, and have recently started learning React. I enjoy bringing design concepts to life 
+                        and crafting responsive, user-friendly experiences. I’m constantly exploring new technologies and refining my coding practices to deliver the best possible results. <br><br>
+                        In addition to my technical skills, I have experience working in customer relations, which has strengthened my communication skills and taught me the importance of understanding user needs.
+                        I’m excited to transition into a full-time role where I can contribute to meaningful projects, collaborate with talented teams, and grow my expertise in web development. Let's connect and see 
+                        how I can help bring your ideas to life!
+                    </p>
+                    
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>My Skills</h2>
+                <div class="skills">
+                    <h3>Front End Development</h3>
+                </div>
+                <button>HTML</button>
+                <button>CSS</button>
+                <button>JavaScript</button>
+                <button>JQuery</button>
+                <button>LIT</button>
+                <button>React</button>
+                <div class="skills">
+                    <h3>Soft-Skills</h3>
+                </div>
+                <button>Great Communication Skills</button>
+                <button>Time Management</button>
+                <button>Problem-solving</button>
+                <button>Adaptibility</button>
+                <button>Eagerness to Learn</button>
+            </section>
+
+            <section id="work">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <div class="project-item">
+                        <img src="./images/customer-service-app.png" alt="customer-service-app">
+                        <div class="project-description">
+                            <div class="project-links">
+                                <h3>Customer Service App</h3>
+                                <a href="https://github.com/cstirneman/customer-service-app" target="_blank"><img src="./images/github-mark-white.png" alt="github-logo"></a>
+                                <button><a href="https://cstirneman.github.io/customer-service-app/">Visit Site</a></button>
+                            </div>
+                            <p>
+                                An app I built for the customer service representatives at NetLaw (the place I am currently employed). This app aims to bring more efficiency to our service department
+                                by allowing representatives to quickly copy and paste responses to FAQ's, find and download commonly used resources, and access a repository of information that is vital to performing
+                                their day-to-day tasks.
+                            </p>
+                            <p>Technologies used: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <img src="./images/quiz-app.png" alt="quiz-app">
+                        <div class="project-description">
+                            <div class="project-links">
+                                <h3>Quiz App</h3>
+                                <a href="https://github.com/cstirneman/quiz-app" target="_blank"><img src="./images/github-mark-white.png" alt="github-logo"></a>
+                                <button><a href="https://simple-quiz.onrender.com/">Visit Site</a></button>
+                            </div>                            <p>
+                                This quiz app is designed for users to create, review, edit, and save custom quizzes. Featuring a user authentication system, it securely stores user data and quiz information
+                                 using MySQL. The backend is powered by Node.js with Express for efficient server management and bcrypt for password encryption. This app provides a streamlined experience for quiz 
+                                 creation and review, supporting personalized learning and content organization.
+                            </p>
+                            <p>Technologies used: HTML, CSS, JavaScript, Node.js, Express, MySQL</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="./images/simon-game.png" alt="simon-game">
+                        <div class="project-description">
+                            <div class="project-links">
+                                <h3>Simon Game</h3>
+                                <a href="https://github.com/cstirneman/simon-game" target="_blank"><img src="./images/github-mark-white.png" alt="github-logo"></a>
+                                <button><a href="https://cstirneman.github.io/simon-game/">Visit Site</a></button>
+                            </div>                            <p>
+                                This project features a simon memory gamewhere the player must repeat an increasingly complex sequence of colors and sounds. The game displays a pattern on a set of colored buttons, and the player 
+                                must replicate that pattern in the correct order. With each round, the sequence becomes longer, challenging the player's memory and attention.
+                            </p>
+                            <p>Technologies used: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="./images/to-do-list.png" alt="to-do-list">
+                        <div class="project-description">
+                            <div class="project-links">
+                                <h3>To-Do List</h3>
+                                <a href="https://github.com/cstirneman/to-do-list" target="_blank"><img src="./images/github-mark-white.png" alt="github-logo"></a>
+                                <button><a href="https://cstirneman.github.io/to-do-list/">Visit Site</a></button>
+                            </div>
+                            <p>
+                                An app I built for the customer service representatives at NetLaw (the place I am currently employed). This app aims to bring more efficiency to our service department
+                                by allowing representatives to quickly copy and paste responses to FAQ's, find and download commonly used resources, and access a repository of information that is vital to performing
+                                their day-to-day tasks.
+                            </p>
+                            <p>Technologies used: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="./images/memory-game.png" alt="memory-game">
+                        <div class="project-description">
+                            <div class="project-links">
+                                <h3>Memory Game</h3>
+                                <a href="https://github.com/cstirneman/matching-game" target="_blank"><img src="./images/github-mark-white.png" alt="github-logo"></a>
+                                <button><a href="https://cstirneman.github.io/matching-game/">Visit Site</a></button>
+                            </div>                            <p>
+                                An app I built for the customer service representatives at NetLaw (the place I am currently employed). This app aims to bring more efficiency to our service department
+                                by allowing representatives to quickly copy and paste responses to FAQ's, find and download commonly used resources, and access a repository of information that is vital to performing
+                                their day-to-day tasks.
+                            </p>
+                            <p>Technologies used: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="./images/weather-app.png" alt="weather-app">
+                        <div class="project-description">
+                            <div class="project-links">
+                                <h3>Weather App</h3>
+                                <a href="https://github.com/cstirneman/weather-app" target="_blank"><img src="./images/github-mark-white.png" alt="github-logo"></a>
+                                <button><a href="https://cstirneman.github.io/weather-app/">Visit Site</a></button>
+                            </div>                            <p>
+                                An app I built for the customer service representatives at NetLaw (the place I am currently employed). This app aims to bring more efficiency to our service department
+                                by allowing representatives to quickly copy and paste responses to FAQ's, find and download commonly used resources, and access a repository of information that is vital to performing
+                                their day-to-day tasks.
+                            </p>
+                            <p>Technologies used: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <form class="contact-form" action="https://formspree.io/f/xldejdow" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                
+                    <button type="submit">Send Message</button>
+                </form>
+                <div id="thank-you" style="display: none; color: #0cc0df; margin-top: 15px;">
+                    Thank you for your message! I'll get back to you soon.
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
