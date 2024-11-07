@@ -109,10 +109,6 @@ html{
     height: 10vh;
 }
 
-.logo-container img:hover{
-    transform: scale(1.2);
-}
-
 .sidebar {
     position: fixed;
     width: 10vw;
@@ -211,7 +207,7 @@ section {
     width: 10vw;
     height: 5vh;
     margin-top: 3vh;
-
+    cursor: none;
 }
 
 .resume-links button{
@@ -222,6 +218,7 @@ section {
     border: none;
     color: white;
     font-size: 1.2rem;
+    cursor: none;
 }
 
 .resume-links button:hover, .resume-links img:hover{
@@ -231,6 +228,7 @@ section {
 .resume-links img{
     height: 5vh;
     margin-left: 2vw;
+    cursor: none;
 }
 
 .contact-btn {
