@@ -145,24 +145,46 @@ html{
     color: #f52ea8;
 }
 
+.welcome-container {
+    position: relative; /* Ensures children are positioned relative to this container */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Add padding around the content */
+    box-sizing: border-box;
+}
+
+.welcome-content {
+    margin-left: 10%; /* Add space from the left */
+    z-index: 1; /* Ensure it’s above decorations */
+}
+
 .code-decoration {
     font-family: 'Tangerine', cursive;
     color: gray;
     font-size: 1.5rem;
     position: absolute;
-    left: 15vw;
+    z-index: 0; /* Place it behind the main content */
 }
 
 .code-decoration.top {
-    top: 10px;
+    top: 5%; /* Dynamic vertical position */
+    left: 5%; /* Align relative to the container */
+}
+
+.code-decoration.top p:nth-child(2) {
+    margin-left: 20px; /* Push the <body> tag to the right */
 }
 
 .code-decoration.bottom {
-    bottom: 15vh;
+    bottom: 5%; /* Dynamic position from the bottom */
+    left: 5%; /* Align relative to the container */
 }
 
-.body-tag-decoration{
-    margin-left: 2vw;
+.code-decoration.bottom p:nth-child(1) {
+    margin-left: 20px; /* Ensure </body> aligns properly */
 }
 
 .scroll-indicator {
@@ -511,33 +533,35 @@ section {
         flex-direction: column;
         justify-content: center; /* Center vertically */
         align-items: flex-start; /* Align to the left */
-        height: 100vh; /* Full viewport height */
-        padding-left: 20%; /* Add spacing from the left */
-        box-sizing: border-box; /* Include padding in layout calculations */
+        min-height: 100vh; /* Full viewport height */
+        padding: 10px; /* Adjust padding for smaller screens */
+        box-sizing: border-box;
     }
 
     #welcome h1 {
-        font-size: 2.5rem; /* Reduce font size */
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
 
     #welcome img {
-        height: 8vh; /* Adjust image size */
+        height: 8vh;
     }
 
+    /* Code Decorations */
     .code-decoration {
         font-family: 'Tangerine', cursive;
         color: gray;
         font-size: 1.5rem;
         position: absolute;
-        left: 10%; /* Align with the text content */
     }
-    
+
     .code-decoration.top {
-        top: 65%; /* Position near the top */
+        top: 5%; /* Adjust for smaller screens */
+        left: 5%;
     }
-    
+
     .code-decoration.bottom {
-        bottom: 10px; /* Position near the bottom */
+        bottom: 5%; /* Adjust closer to bottom content */
+        left: 5%;
     }
     
     .scroll-indicator {
@@ -566,12 +590,16 @@ section {
     /* About Section */
 
     #about{
-        height: 200vh;
+        min-height: 200vh;
     }
     #about h2{
         width: 90%;
         text-align: center;
         margin-left: 5%;
+    }
+
+    #about img{
+        margin-bottom: 10px;
     }
     .about-content {
         flex-direction: column; /* Stack image and text vertically */
@@ -582,7 +610,6 @@ section {
     .image-container{
         height: auto;
         max-width: 50%; /* Make image responsive */
-        margin-bottom: 20px;
     }
 
     .about-content p {
@@ -593,7 +620,7 @@ section {
 
     /* Skills Section */
     #skills{
-        height: 150vh;
+        min-height: 150vh;
         display: flex;
         flex-direction: column;
         margin-left: 5%;
@@ -616,7 +643,7 @@ section {
 
     /* Projects Section */
     #work{
-        height: 450vh;
+        min-height: 450vh;
     }
 
     #work h2{
